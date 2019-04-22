@@ -48,6 +48,7 @@ int main()
 			for (std::string c : num2)
 				std::cout << c;
 			std::cout << "\n";
+			//std::cout <<"\t" <<num1 + num2 << std::endl;
 
 		}
 		else
