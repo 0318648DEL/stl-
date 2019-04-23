@@ -39,13 +39,13 @@ int main()
 			std::cin >> filename2;
 			std::ifstream in1(filename1);
 			std::ifstream in2(filename2);
-			std::vector<std::string> num1{ std::istream_iterator<std::string>(in1),std::istream_iterator<std::string>() };
-			std::vector<std::string> num2{ std::istream_iterator<std::string>(in2),std::istream_iterator<std::string>() };
+			std::string num1{ (std::istreambuf_iterator<char>(in1)),(std::istreambuf_iterator<char>()) };
+			std::string num2{ (std::istreambuf_iterator<char>(in2)),(std::istreambuf_iterator<char>()) };
 			std::cout << "\t";
-			for (std::string c : num1)
+			for (char c : num1)
 				std::cout << c;
 			std::cout << "\n+\t";
-			for (std::string c : num2)
+			for (char c : num2)
 				std::cout << c;
 			std::cout << "\n";
 			//std::cout <<"\t" <<num1 + num2 << std::endl;
